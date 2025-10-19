@@ -42,19 +42,19 @@ public class PacManRectangleMovement : MonoBehaviour
 
     void Update()
     {
-        t += Time.deltaTime / segmentDuration;
-        // Debug.Log("Time trigger: " + t);
-        transform.position = Vector3.Lerp(corners[currentCorner], corners[nextCorner], t);
-
-        if (t >= 1f)
-        {
-            // Move to next segment
-            currentCorner = nextCorner;
-            nextCorner = (nextCorner + 1) % corners.Length;
-            t = 0f;
-            segmentDuration = Vector3.Distance(corners[currentCorner], corners[nextCorner]) / speed;
-            SetDirectionAnimation();
-        }
+        // t += Time.deltaTime / segmentDuration;
+        // // Debug.Log("Time trigger: " + t);
+        // transform.position = Vector3.Lerp(corners[currentCorner], corners[nextCorner], t);
+        //
+        // if (t >= 1f)
+        // {
+        //     // Move to next segment
+        //     currentCorner = nextCorner;
+        //     nextCorner = (nextCorner + 1) % corners.Length;
+        //     t = 0f;
+        //     segmentDuration = Vector3.Distance(corners[currentCorner], corners[nextCorner]) / speed;
+        //     SetDirectionAnimation();
+        // }
     }
 
     void SetDirectionAnimation()
